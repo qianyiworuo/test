@@ -36,6 +36,7 @@ public class BookController {
     }
 
     @RequestMapping("/del/{bookId}")
+    //@PathVariable("bookId")這是什麼註解啊
     public String deleteBook(@PathVariable("bookId") String id) {
         bookService.deleteBookById(id);
         return "redirect:/book/allBook";

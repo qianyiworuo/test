@@ -43,6 +43,7 @@ public class BookController {
 
     @RequestMapping("toUpdateBook")
     public String toUpdateBook(Model model, String id) {
+        //方法一
 //        List<Book> list = bookService.queryAllBook();
 //        for (int i = 0; i < list.size(); i++) {
 //            if(list.get(i).getBookId().equals(id)){
@@ -50,6 +51,7 @@ public class BookController {
 //                model.addAttribute("book", book);
 //            }
 //        }
+        //方法二
         Book book = bookService.queryById(id);
         model.addAttribute("book", book);
         return "updateBook";
